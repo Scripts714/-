@@ -1,0 +1,51 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Epic Tank Driving", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Spawner",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Spawner"
+})
+
+Tab:AddButton({
+	Name = "Ratter",
+	Callback = function()
+      		local args = {
+	"Ratter"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpawnCar"):FireServer(unpack(args))
+   end    
+})
+
+Tab:AddButton({
+	Name = "Gustav",
+	Callback = function()
+      		local args = {
+	"Dora"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpawnCar"):FireServer(unpack(args))
+   end    
+})
+
+Tab:AddButton({
+	Name = "Maus",
+	Callback = function()
+      		local args = {
+	"Maus"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpawnCar"):FireServer(unpack(args))
+   end    
+})
+
+Tab:AddButton({
+	Name = "kv6",
+	Callback = function()
+      		local args = {
+	"KV6"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpawnCar"):FireServer(unpack(args))
+   end    
+})
